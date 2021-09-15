@@ -33,7 +33,7 @@ public class HospitalSetController {
     }
 
     //2. 逻辑删除医院设置
-    @ApiOperation(value = "逻辑删除医院设置")
+    @ApiOperation(value = "逻辑删除医院设置信息")
     @DeleteMapping("{id}")
     public Result removeHospitalSet(@PathVariable Long id){
         boolean flag = hospitalSetService.removeById(id);
