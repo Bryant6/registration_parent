@@ -1,7 +1,6 @@
-package com.wang.yygh.hosp.config;
+package com.wang.yygh.cmn.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
  * @date 2021/9/15 19:56
  */
 @Configuration
-@MapperScan("com.wang.yygh.hosp.mapper")
-public class HospConfig {
+@MapperScan("com.wang.yygh.cmn.mapper")
+public class CmnConfig {
 
     @Bean
     public PaginationInterceptor paginationInterceptor(){

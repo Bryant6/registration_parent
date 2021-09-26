@@ -1,0 +1,32 @@
+package com.wang.yygh.cmn.controller;
+
+import com.wang.yygh.cmn.service.DictService;
+import com.wang.yygh.common.result.Result;
+import com.wang.yygh.model.cmn.Dict;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+/**
+ * @author wangyu
+ * @date 2021/9/26 16:51
+ */
+@Api(value = "数据字典接口")
+@RestController
+@RequestMapping("/admin/cmn/dict")
+@CrossOrigin
+public class DictController {
+
+    @Autowired
+    private DictService dictService;
+
+    @ApiOperation(value = "根据数据id查询子数据列表")
+    @GetMapping("findChildData/{id}")
+    public Result findChildData(@PathVariable Long id){
+        List<Dict> list = dictService.findChildData(id);
+        return Result.ok(list);
+    }
+}
