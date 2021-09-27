@@ -5,3 +5,31 @@
 - 数据库：MySQL
 - gitee版本管理（https://gitee.com/wy666666/registration_parent.git）
 - 前端：ECMAScript6（ES6）、Vue、axios、element-ui、node.js、npm、webpack
+- 数据字典: EasyExcel
+
+## service
+- service_hosp: 医院设置管理
+
+  | 请求方式 | 路径                                                      | 功能                 |
+  | -------- | --------------------------------------------------------- | -------------------- |
+  | DELETE   | /admin/hosp/hospitalSet/batchRemove                       | 批量删除医院设置     |
+  | DELETE   | /admin/hosp/hospitalSet/delete/{id}                       | 逻辑删除医院设置信息 |
+  | GET      | /admin/hosp/hospitalSet/findAll                           | 获取所有医院信息     |
+  | POST     | /admin/hosp/hospitalSet/findPageHospSet/{current}/{limit} | 条件查询带分页       |
+  | GET      | /admin/hosp/hospitalSet/getHospitalSet/{id}               | 根据id获取医院设置   |
+  | PUT      | /admin/hosp/hospitalSet/lockHospitalSet/{id}/{status}     | 锁定解锁             |
+  | POST     | /admin/hosp/hospitalSet/saveHospitalSet                   | 添加医院设置         |
+  | PUT      | /admin/hosp/hospitalSet/sendKey/{id}                      | 发送签名秘钥         |
+  | POST     | /admin/hosp/hospitalSet/updateHospitalSet                 | 修改医院设置         |
+
+
+- service_cmn: 数据字典服务
+
+  | 请求方式 | 路径                               | 功能                 |
+  | -------- | ---------------------------------- | -------------------- |
+  | GET      | /admin/cmn/dict/exportData         | 导出数据字典         |
+  | GET      | /admin/cmn/dict/findChildData/{id} | 根据id查询子数据列表 |
+  | POST     | /admin/cmn/dict/impoerData         | 导入数据字典         |
+
+  
+
