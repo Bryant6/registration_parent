@@ -21,6 +21,7 @@
         <dependency>
             <groupId>com.wang</groupId>
             <artifactId>model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.wang</groupId>
@@ -30,6 +31,7 @@
         <dependency>
             <groupId>com.wang</groupId>
             <artifactId>common_util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--web-->
         <dependency>
@@ -58,10 +60,10 @@
 <!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
 <!--        </dependency>-->
         <!-- 服务注册 -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
         <!-- 流量控制 -->
         <!-- <dependency>
              <groupId>com.alibaba.cloud</groupId>
