@@ -7,6 +7,27 @@
 - 前端：ECMAScript6（ES6）、Vue、axios、element-ui、node.js、npm、webpack
 - 数据字典: EasyExcel
 
+模拟医院系统接口中使用MongoDB数据库。
+
+
+
+## 后台系统医院管理
+
+service-hosp调用service-cmn远程调用，使用注册中心与服务调用
+
+注册中心
+
+- Eureka
+- Zookeeper
+- Consul
+- Nacos
+
+使用Nacos，Nacos = Spring Cloud Eureka + Spring Cloud Config
+nacos(server:1.1.4,springboot:2.2.2;)
+@EnableDiscoveryClient
+nacos:8848 | service-hosp:8201 | service-cmn:8202
+
+
 ## service
 - service_hosp: 医院设置管理
 
