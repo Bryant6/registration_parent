@@ -53,4 +53,4 @@ nacos:8848 | service-hosp:8201 | service-cmn:8202
   | POST     | /admin/cmn/dict/impoerData         | 导入数据字典         |
 
   
-
+Redis:service redisd start

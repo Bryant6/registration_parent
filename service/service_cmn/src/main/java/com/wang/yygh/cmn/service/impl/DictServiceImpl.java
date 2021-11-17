@@ -98,6 +98,21 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
 
     }
 
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        Dict codeDict = this.getDictByDictCode(dictCode);
+        if(codeDict == null) return null;
+        return this.findChildData(codeDict.getId());
+
+    }
+
+    private Dict getDictByDictCode(String dictCode){
+        QueryWrapper<Dict>  wrapper = new QueryWrapper<>();
+        wrapper.eq("dict_code",dictCode);
+        Dict codeDict = baseMapper.selectOne(wrapper);
+        return codeDict;
+    }
+
     //判断id下是否有子节点
     private boolean isChildren(Long id){
         QueryWrapper<Dict> wrapper = new QueryWrapper<>();
