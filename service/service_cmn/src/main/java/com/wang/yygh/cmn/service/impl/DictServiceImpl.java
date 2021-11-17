@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -77,6 +78,24 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String getDictName(String dictCode, String value) {
+        if(StringUtils.isEmpty(dictCode)){
+            QueryWrapper<Dict>  wrapper = new QueryWrapper<>();
+            wrapper.eq("value",value);
+            Dict dict = baseMapper.selectOne(wrapper);
+            return dict.getName();
+        }else{
+            QueryWrapper<Dict>  wrapper = new QueryWrapper<>();
+            wrapper.eq("dict_code",dictCode);
+            Dict codeDict = baseMapper.selectOne(wrapper);
+            Long parentId = codeDict.getId();
+            Dict dict = baseMapper.selectOne(new QueryWrapper<Dict>().eq("parent_id", parentId).eq("value", value));
+            return dict.getName();
+        }
+
     }
 
     //判断id下是否有子节点
