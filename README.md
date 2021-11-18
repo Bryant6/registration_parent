@@ -15,7 +15,7 @@
 
 service-hosp调用service-cmn远程调用，使用注册中心与服务调用
 
-注册中心
+**注册中心**
 
 - Eureka
 - Zookeeper
@@ -26,6 +26,16 @@ service-hosp调用service-cmn远程调用，使用注册中心与服务调用
 nacos(server:1.1.4,springboot:2.2.2;)
 @EnableDiscoveryClient
 nacos:8848 | service-hosp:8201 | service-cmn:8202
+
+
+
+**服务网关**
+
+Spring Cloud Gateway 替代Nginx
+
+![image-20211118150907290](C:\Users\Bryant\AppData\Roaming\Typora\typora-user-images\image-20211118150907290.png)
+
+
 
 
 ## service
@@ -53,4 +63,5 @@ nacos:8848 | service-hosp:8201 | service-cmn:8202
   | POST     | /admin/cmn/dict/impoerData         | 导入数据字典         |
 
   
+
 Redis:service redisd start
