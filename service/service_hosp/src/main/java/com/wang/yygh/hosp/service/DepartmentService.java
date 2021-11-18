@@ -1,10 +1,12 @@
 package com.wang.yygh.hosp.service;
 
+import com.wang.yygh.vo.hosp.DepartmentVo;
 import org.springframework.data.domain.Page;
 import com.wang.yygh.model.hosp.Department;
 import com.wang.yygh.model.hosp.Hospital;
 import com.wang.yygh.vo.hosp.DepartmentQueryVo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,4 +20,8 @@ public interface DepartmentService {
     Page<Department> selectPage(int page, int limit, DepartmentQueryVo departmentQueryVo);
 
     void remove(String hoscode, String depcode);
+
+    List<DepartmentVo> findDeptTree(String hoscode);
+
+    String getDepName(String hoscode, String depcode);
 }
