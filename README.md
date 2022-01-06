@@ -2,7 +2,7 @@
 - 项目架构：SpringBoot + Maven
 - SpringCloud分布式微服务
 - 接口测试：Swagger（http://localhost:port/swagger-ui.html）
-- 数据库：MySQL
+- 数据库：MySQL、Redis。MongoDB
 - gitee版本管理（https://gitee.com/wy666666/registration_parent.git）
 - 前端：ECMAScript6（ES6）、Vue、axios、element-ui、node.js、npm、webpack
 - 数据字典: EasyExcel
